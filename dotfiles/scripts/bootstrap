@@ -20,7 +20,7 @@ xcode-select --install
 echo "Checking for, or Installing Homebrew..."
 if [ -z `command -v brew` ]; then
     echo "Brew is missing! Installing it..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi;
 
 
@@ -94,39 +94,39 @@ yarn global add svgo
 # Install applications with Homebrew Cask
 ###############################################################################
 echo "Homebrew Cask: installing apps..."
-brew cask install 1password
-brew cask install ableton-live-suite
-brew cask install adobe-creative-cloud
-brew cask install alfred
-brew cask install dash
-brew cask install docker
-# brew cask install dropbox
-brew cask install figma
-brew cask install firefox
-brew cask install framer-x
-brew cask install github
-brew cask install google-chrome
-brew cask install google-cloud-sdk
-brew cask install google-drive-file-stream
-brew cask install hyper
-brew cask install imageoptim
-brew cask install iina
-brew cask install iterm2
-brew cask install notion
-brew cask install nucleo
-brew cask install obs
-brew cask install postman
-brew cask install screenflow
-brew cask install skype
-brew cask install slack
-brew cask install spectacle
-brew cask install spotify
-brew cask install sourcetree
-brew cask install tor-browser
-brew cask install transmit
-brew cask install tunnelbear
-brew cask install visual-studio-code
-brew cask install whatsapp
+brew install --cask 1password
+brew install --cask ableton-live-suite
+brew install --cask adobe-creative-cloud
+brew install --cask alfred
+brew install --cask dash
+brew install --cask docker
+# brew install --cask dropbox
+brew install --cask figma
+brew install --cask firefox
+brew install --cask framer-x
+brew install --cask github
+brew install --cask google-chrome
+brew install --cask google-cloud-sdk
+brew install --cask google-drive-file-stream
+brew install --cask hyper
+brew install --cask imageoptim
+brew install --cask iina
+brew install --cask iterm2
+brew install --cask notion
+brew install --cask nucleo
+brew install --cask obs
+brew install --cask postman
+brew install --cask screenflow
+brew install --cask skype
+brew install --cask slack
+brew install --cask spectacle
+brew install --cask spotify
+brew install --cask sourcetree
+brew install --cask tor-browser
+brew install --cask transmit
+brew install --cask tunnelbear
+brew install --cask visual-studio-code
+brew install --cask whatsapp
 
 
 ###############################################################################
@@ -141,7 +141,7 @@ open /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.
 ###############################################################################
 # Cleanup
 ###############################################################################
-brew cask cleanup
+brew cleanup
 
 
 ###############################################################################
